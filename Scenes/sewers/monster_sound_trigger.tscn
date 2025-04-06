@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://cle8c6rdqlcnb"]
+
+[ext_resource type="Script" uid="uid://d4incivebx4md" path="res://Scenes/sewers/monster_sound_trigger.gd" id="1_8p1ca"]
+[ext_resource type="AudioStream" uid="uid://8nrdqxdelay0" path="res://Assets/sound/horror-sound-monster-roar-1-189931.mp3" id="2_72b65"]
+[ext_resource type="AudioStream" uid="uid://dijnt8fhj7dan" path="res://Assets/sound/horror-sound-monster-breath-189934.mp3" id="2_nb5m3"]
+[ext_resource type="AudioStream" uid="uid://b4wj86u1hf6d4" path="res://Assets/sound/horror-sound-monster-roar-2-189933.mp3" id="4_rr742"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_glkwb"]
+
+[node name="monster_sound_trigger" type="Area3D"]
+collision_layer = 33
+collision_mask = 33
+script = ExtResource("1_8p1ca")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_glkwb")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_nb5m3")
+pitch_scale = 0.79
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_72b65")
+pitch_scale = 0.79
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_rr742")
+pitch_scale = 0.79
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
