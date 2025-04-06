@@ -152,6 +152,8 @@ transform = Transform3D(-0.75385, 0.280058, 0.594372, 0, 0.904611, -0.426237, -0
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -131.88
+offset_bottom = -55.88
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
@@ -159,6 +161,7 @@ theme_override_constants/margin_top = 250
 theme_override_constants/margin_right = 200
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
@@ -176,6 +179,39 @@ text = "CREDITS
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "QUIT"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Programming & Level Design
+==========================
+Joris \"Alvaron\" Pyl
+
+
+Model & Texture Assets
+===================
+https://elbolilloduro.itch.io/
+https://www.turbosquid.com/Search/Artists/5DollarStore
+
+
+Sound Fx
+=========
+https://pixabay.com/users/alex_jauk-16800354/
+https://pixabay.com/users/freesound_community-46691455/
+
+
+Music
+=======
+https://pixabay.com/users/lachm-25025248/"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "back"
 
 [node name="straight_long" parent="." instance=ExtResource("15_2x1g0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.813, 0.370609, 9.63609)
@@ -204,5 +240,6 @@ transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Button" to="." method="_on_button_pressed"]
 
 [editable path="level/round_irongate_with_door"]
