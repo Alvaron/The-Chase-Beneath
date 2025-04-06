@@ -11,6 +11,8 @@ var input_mouse:Vector2
 var movement_velocity:Vector3
 var rotation_target:Vector3
 
+var equiped = []
+
 @onready var camera: Camera3D = $Camera3D
 @onready var ray: RayCast3D = $Camera3D/RayCast3D
 @onready var label: Label = $Camera3D/Label
@@ -64,7 +66,11 @@ func handle_controls(delta:float) -> void:
 	
 	if Input.is_action_just_pressed("interact"):
 		if ray.is_colliding() and ray.get_collider().is_in_group("interactable"):
-			ray.get_collider().get_parent().interact()
+			if !ray.get_collider().get_parent().locked:
+				ray.get_collider().get_parent().interact()
+			else:
+				if equiped.has(ray.get_collider().get_parent().locked_required):
+					ray.get_collider().get_parent().interact()
 	
 	if Input.is_action_pressed("debug_escape"):
 		get_tree().quit()
@@ -76,6 +82,9 @@ func handle_gravity(delta:float) -> void:
 func check_interaction() -> void:
 	if ray.is_colliding():
 		if ray.get_collider().is_in_group("interactable") and ray.get_collider().get_parent().is_useable():
+			label.text = "USE  [ F ]"
 			label.visible = true
+			if ray.get_collider().get_parent().locked and !equiped.has(ray.get_collider().get_parent().locked_required):
+				label.text = "YOU NEED " + ray.get_collider().get_parent().locked_required
 	else:
 		label.visible = false

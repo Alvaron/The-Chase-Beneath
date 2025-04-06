@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="LudumDare_57"
+config/name="The Chase Beneath"
+config/description="My entry for LudumDare 57, a horror FPS with the theme \"Depths\""
 run/main_scene="uid://btquyh8tf1oh6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[debug]
+
+file_logging/enable_file_logging=true
 
 [global_group]
 

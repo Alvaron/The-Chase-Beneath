@@ -1,0 +1,152 @@
+[gd_scene load_steps=16 format=3 uid="uid://b8luqhrg0b4bc"]
+
+[ext_resource type="Script" uid="uid://nyj0mgcfmnwe" path="res://Scenes/main_menu.gd" id="1_koqhg"]
+[ext_resource type="PackedScene" uid="uid://0lp276k87os2" path="res://Scenes/sewers/brick/brick_small_section.tscn" id="2_7467j"]
+[ext_resource type="PackedScene" uid="uid://dq04vl1aelsiq" path="res://Scenes/sewers/brick/brick_small_section_side_door.tscn" id="4_riqfo"]
+[ext_resource type="PackedScene" uid="uid://cqvuq7dcdndfn" path="res://Scenes/sewers/brick/brick_small_section_endcap.tscn" id="5_yxkem"]
+[ext_resource type="PackedScene" uid="uid://bqh80regujx4m" path="res://Scenes/sewers/brick/brick_small_section_intersection_t.tscn" id="6_7v4os"]
+[ext_resource type="PackedScene" uid="uid://djfc5621vr50m" path="res://Scenes/sewers/brick/brick_small_section_bend_large.tscn" id="9_65hh5"]
+[ext_resource type="PackedScene" uid="uid://v32u8wvq1qjk" path="res://Scenes/sewers/round_irongate_with_door.tscn" id="11_leunp"]
+[ext_resource type="AudioStream" uid="uid://tab88887t1oi" path="res://Assets/sound/sound-ambience-sonido-ambiente-3-14040.mp3" id="14_iqn0u"]
+
+[sub_resource type="Environment" id="Environment_74lek"]
+ambient_light_color = Color(0.805575, 0.645287, 0.414176, 1)
+ambient_light_energy = 0.3
+tonemap_mode = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_albedo = Color(0, 0.240552, 0.0827254, 1)
+volumetric_fog_emission_energy = 0.3
+
+[sub_resource type="Image" id="Image_koqhg"]
+data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_cmrfp"]
+data = {
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_loo7a"]
+data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_if7li"]
+data = {
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture3D" id="ImageTexture3D_xrtyr"]
+_images = Array[Image]([SubResource("Image_koqhg"), SubResource("Image_cmrfp"), SubResource("Image_loo7a"), SubResource("Image_if7li")])
+
+[sub_resource type="FogMaterial" id="FogMaterial_7mbro"]
+density = 0.3
+emission = Color(0.223103, 0.223103, 0.223103, 1)
+edge_fade = 0.221914
+density_texture = SubResource("ImageTexture3D_xrtyr")
+
+[node name="MAIN" type="Node3D"]
+script = ExtResource("1_koqhg")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_74lek")
+
+[node name="level" type="Node3D" parent="."]
+
+[node name="brick_small_section8" parent="level" instance=ExtResource("2_7467j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.4924, 0, 7.74384)
+
+[node name="brick_small_section10" parent="level" instance=ExtResource("2_7467j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30.0242, 0, 7.74384)
+
+[node name="brick_small_section11" parent="level" instance=ExtResource("2_7467j")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.2586, 0, 15.494)
+
+[node name="brick_small_section12" parent="level" instance=ExtResource("2_7467j")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.2586, 0, 22.2622)
+
+[node name="brick_small_section_side_door" parent="level" instance=ExtResource("4_riqfo")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.7681, 0, 7.74106)
+
+[node name="brick_small_section_endcap" parent="level" instance=ExtResource("5_yxkem")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5093, 0, 7.73671)
+
+[node name="brick_small_section_intersection_T" parent="level" instance=ExtResource("6_7v4os")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.2605, 0, 7.74312)
+
+[node name="brick_small_section_bend_large" parent="level" instance=ExtResource("9_65hh5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -39.76, 0, 45.518)
+
+[node name="round_irongate_with_door" parent="level" instance=ExtResource("11_leunp")]
+transform = Transform3D(-7.64949e-08, 0, 1.75, 0, 1.75, 0, -1.75, 0, -7.64949e-08, -22.2587, -0.229975, 12.0755)
+
+[node name="StaticBody3D" parent="level/round_irongate_with_door/irongate_with_door" index="1"]
+useable = true
+
+[node name="FogVolume2" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10275, 0, -13.0234)
+size = Vector3(226.001, 10, 210.815)
+material = SubResource("FogMaterial_7mbro")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_iqn0u")
+volume_db = -5.148
+pitch_scale = 0.83
+autoplay = true
+parameters/looping = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.75385, 0.280058, 0.594372, 0, 0.904611, -0.426237, -0.657046, -0.321319, -0.681941, -20.3035, -0.431831, 8.70699)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 250
+theme_override_constants/margin_right = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PLAY"
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "CREDITS
+"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+
+[editable path="level/round_irongate_with_door"]

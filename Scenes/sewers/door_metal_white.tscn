@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://coo8oe2m5tcep"]
+[gd_scene load_steps=9 format=4 uid="uid://coo8oe2m5tcep"]
 
 [ext_resource type="Script" uid="uid://cc8vmm24j8aie" path="res://Scenes/sewers/doorscript.gd" id="1_5u7mn"]
 [ext_resource type="Texture2D" uid="uid://2xak8jumaoml" path="res://Assets/Sewer/Textures/door_metal.jpg" id="1_pb642"]
+[ext_resource type="AudioStream" uid="uid://biv65avspst2g" path="res://Assets/sound/door-noise-creak-236022.mp3" id="3_4sjxt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1u7ya"]
 resource_name = "door_metal"
@@ -71,3 +72,6 @@ collision_mask = 8
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(120, 0, 0, 0, 120, -1.95505e-05, 0, 1.95505e-05, 120, 0.0224304, 0.543552, -0.52002)
 shape = SubResource("BoxShape3D_4sjxt")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_4sjxt")
