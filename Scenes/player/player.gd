@@ -65,12 +65,17 @@ func handle_controls(delta:float) -> void:
 			gravity = -jump_speed
 	
 	if Input.is_action_just_pressed("interact"):
-		if ray.is_colliding() and ray.get_collider().is_in_group("interactable"):
-			if !ray.get_collider().get_parent().locked:
-				ray.get_collider().get_parent().interact()
-			else:
-				if equiped.has(ray.get_collider().get_parent().locked_required):
+		if ray.is_colliding():
+			if ray.get_collider().is_in_group("interactable"):
+				if !ray.get_collider().get_parent().locked:
 					ray.get_collider().get_parent().interact()
+				else:
+					if equiped.has(ray.get_collider().get_parent().locked_required):
+						ray.get_collider().get_parent().interact()
+			if ray.get_collider().is_in_group("collectable"):
+				print("boop the snoot")
+				ray.get_collider().get_parent().interact(self)
+		
 	
 	if Input.is_action_pressed("debug_escape"):
 		get_tree().quit()
@@ -81,10 +86,15 @@ func handle_gravity(delta:float) -> void:
 
 func check_interaction() -> void:
 	if ray.is_colliding():
+		if !ray.get_collider():
+			return
 		if ray.get_collider().is_in_group("interactable") and ray.get_collider().get_parent().is_useable():
 			label.text = "USE  [ F ]"
 			label.visible = true
 			if ray.get_collider().get_parent().locked and !equiped.has(ray.get_collider().get_parent().locked_required):
 				label.text = "YOU NEED " + ray.get_collider().get_parent().locked_required
+		if ray.get_collider().is_in_group("collectable"):
+			label.text = "GRAB  [ F ]"
+			label.visible = true
 	else:
 		label.visible = false

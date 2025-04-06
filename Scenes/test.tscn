@@ -1,23 +1,38 @@
-[gd_scene load_steps=33 format=3 uid="uid://btquyh8tf1oh6"]
+[gd_scene load_steps=50 format=3 uid="uid://btquyh8tf1oh6"]
 
 [ext_resource type="Script" uid="uid://c2bkd2n0c1ixn" path="res://Scenes/test.gd" id="1_7mbro"]
 [ext_resource type="PackedScene" uid="uid://0lp276k87os2" path="res://Scenes/sewers/brick/brick_small_section.tscn" id="1_iyx0m"]
 [ext_resource type="PackedScene" uid="uid://106rn2p24ufg" path="res://Scenes/sewers/brick/brick_small_section_sharp_corner.tscn" id="2_74lek"]
 [ext_resource type="PackedScene" uid="uid://cxlmwcyqd38xu" path="res://Scenes/player/player.tscn" id="3_iyx0m"]
 [ext_resource type="PackedScene" uid="uid://dq04vl1aelsiq" path="res://Scenes/sewers/brick/brick_small_section_side_door.tscn" id="3_j5jx5"]
+[ext_resource type="PackedScene" uid="uid://dtc3vhwfivppe" path="res://Scenes/items/oil_lamp.tscn" id="4_4k8fq"]
 [ext_resource type="PackedScene" uid="uid://dr1pf5krx8avu" path="res://Scenes/sewers/brick/brick_doorframe.tscn" id="4_lpvoh"]
+[ext_resource type="PackedScene" uid="uid://8rd786m0ypgo" path="res://Scenes/props/cardboard_high_closed.tscn" id="5_75pfo"]
 [ext_resource type="PackedScene" uid="uid://cdodfejabfhsg" path="res://Scenes/sewers/door_metal_greenish.tscn" id="5_at5dv"]
 [ext_resource type="PackedScene" uid="uid://cqvuq7dcdndfn" path="res://Scenes/sewers/brick/brick_small_section_endcap.tscn" id="5_jcd4p"]
+[ext_resource type="PackedScene" uid="uid://dnbgoiweap6op" path="res://Scenes/items/fine_key.tscn" id="6_gv2t6"]
 [ext_resource type="PackedScene" uid="uid://bqh80regujx4m" path="res://Scenes/sewers/brick/brick_small_section_intersection_t.tscn" id="6_uacia"]
 [ext_resource type="PackedScene" uid="uid://dou6wg11bbbdk" path="res://Scenes/sewers/maintenance/straight_section.tscn" id="9_xrtyr"]
 [ext_resource type="PackedScene" uid="uid://djfc5621vr50m" path="res://Scenes/sewers/brick/brick_small_section_bend_large.tscn" id="9_yk7ts"]
 [ext_resource type="PackedScene" uid="uid://bvv1c11ufhdcd" path="res://Scenes/sewers/brick/brick_small_section_intersection_4_way.tscn" id="10_ajshl"]
+[ext_resource type="PackedScene" uid="uid://3rcfx4qd0qag" path="res://Scenes/props/trashpile.tscn" id="10_n74k2"]
 [ext_resource type="PackedScene" uid="uid://v32u8wvq1qjk" path="res://Scenes/sewers/round_irongate_with_door.tscn" id="11_ajshl"]
+[ext_resource type="PackedScene" uid="uid://dqfotgg6pf2pg" path="res://Scenes/props/trashbag_1.tscn" id="11_si7kk"]
 [ext_resource type="PackedScene" uid="uid://cle8c6rdqlcnb" path="res://Scenes/sewers/monster_sound_trigger.tscn" id="12_ghpyy"]
+[ext_resource type="PackedScene" uid="uid://d1c7gwx3d0fu7" path="res://Scenes/props/trashbag_2.tscn" id="12_pn65j"]
 [ext_resource type="AudioStream" uid="uid://tab88887t1oi" path="res://Assets/sound/sound-ambience-sonido-ambiente-3-14040.mp3" id="13_44saj"]
 [ext_resource type="PackedScene" uid="uid://ccg5wfuugswxv" path="res://Scenes/sewers/maintenance/straight_section_dooropening.tscn" id="15_ff6ho"]
 [ext_resource type="PackedScene" uid="uid://cvb8j2pmcitx6" path="res://Scenes/sewers/maintenance/straight_section_bend_small.tscn" id="17_daiq8"]
 [ext_resource type="PackedScene" uid="uid://c8jppljw24gfk" path="res://Scenes/sewers/maintenance/straight_section_rise_dooropening.tscn" id="18_c6rvn"]
+[ext_resource type="PackedScene" uid="uid://h2vvrgv6t2a" path="res://Scenes/props/pallet.tscn" id="22_kay4s"]
+[ext_resource type="PackedScene" uid="uid://chet1ydnc5f4x" path="res://Scenes/props/tire.tscn" id="23_j7bvy"]
+[ext_resource type="PackedScene" uid="uid://bwlpjwt64k5kv" path="res://Scenes/props/trash_1.tscn" id="24_1dqgb"]
+[ext_resource type="PackedScene" uid="uid://sfqulcu5kuba" path="res://Scenes/props/cardboard_high_open.tscn" id="25_y81of"]
+[ext_resource type="PackedScene" uid="uid://rqy8y0rec5rj" path="res://Scenes/props/ruble_pile_brick.tscn" id="26_gsk6d"]
+[ext_resource type="PackedScene" uid="uid://l6wcspiyotr0" path="res://Scenes/pipes/straight_long.tscn" id="27_j7bvy"]
+[ext_resource type="PackedScene" uid="uid://c4of0hl13t4ho" path="res://Scenes/items/rusty_key.tscn" id="28_1dqgb"]
+[ext_resource type="Script" uid="uid://cmkxo212d8h43" path="res://Scenes/scripts/task_item.gd" id="29_y81of"]
+[ext_resource type="PackedScene" uid="uid://c4owghtwj83om" path="res://Scenes/sewers/brick/brick_small_section_w_manhole.tscn" id="33_75pfo"]
 
 [sub_resource type="Environment" id="Environment_74lek"]
 ambient_light_color = Color(0.805575, 0.645287, 0.414176, 1)
@@ -28,7 +43,13 @@ volumetric_fog_density = 0.0
 volumetric_fog_albedo = Color(0, 0.240552, 0.0827254, 1)
 volumetric_fog_emission_energy = 0.3
 
-[sub_resource type="Image" id="Image_xrtyr"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5civd"]
+size = Vector3(0.226709, 0.0382324, 0.110742)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1xwo4"]
+size = Vector3(0.277981, 0.0629883, 0.155731)
+
+[sub_resource type="Image" id="Image_75pfo"]
 data = {
 "data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
@@ -37,7 +58,7 @@ data = {
 "width": 4
 }
 
-[sub_resource type="Image" id="Image_daiq8"]
+[sub_resource type="Image" id="Image_gv2t6"]
 data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
@@ -46,7 +67,7 @@ data = {
 "width": 4
 }
 
-[sub_resource type="Image" id="Image_c6rvn"]
+[sub_resource type="Image" id="Image_1xwo4"]
 data = {
 "data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
@@ -55,7 +76,7 @@ data = {
 "width": 4
 }
 
-[sub_resource type="Image" id="Image_n74k2"]
+[sub_resource type="Image" id="Image_5civd"]
 data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
@@ -65,7 +86,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture3D" id="ImageTexture3D_ghpyy"]
-_images = Array[Image]([SubResource("Image_xrtyr"), SubResource("Image_daiq8"), SubResource("Image_c6rvn"), SubResource("Image_n74k2")])
+_images = Array[Image]([SubResource("Image_75pfo"), SubResource("Image_gv2t6"), SubResource("Image_1xwo4"), SubResource("Image_5civd")])
 
 [sub_resource type="FogMaterial" id="FogMaterial_yk7ts"]
 density = 0.15
@@ -74,7 +95,7 @@ emission = Color(0.0702456, 0.259546, 0.111142, 1)
 edge_fade = 0.303143
 density_texture = SubResource("ImageTexture3D_ghpyy")
 
-[sub_resource type="Image" id="Image_si7kk"]
+[sub_resource type="Image" id="Image_mi64w"]
 data = {
 "data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
@@ -83,7 +104,7 @@ data = {
 "width": 4
 }
 
-[sub_resource type="Image" id="Image_pn65j"]
+[sub_resource type="Image" id="Image_ds53i"]
 data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
@@ -92,7 +113,7 @@ data = {
 "width": 4
 }
 
-[sub_resource type="Image" id="Image_5f8cm"]
+[sub_resource type="Image" id="Image_p8c7m"]
 data = {
 "data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
@@ -101,7 +122,7 @@ data = {
 "width": 4
 }
 
-[sub_resource type="Image" id="Image_gm488"]
+[sub_resource type="Image" id="Image_3ss0b"]
 data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
@@ -111,7 +132,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture3D" id="ImageTexture3D_xrtyr"]
-_images = Array[Image]([SubResource("Image_si7kk"), SubResource("Image_pn65j"), SubResource("Image_5f8cm"), SubResource("Image_gm488")])
+_images = Array[Image]([SubResource("Image_mi64w"), SubResource("Image_ds53i"), SubResource("Image_p8c7m"), SubResource("Image_3ss0b")])
 
 [sub_resource type="FogMaterial" id="FogMaterial_7mbro"]
 density = 0.3
@@ -130,6 +151,39 @@ script = ExtResource("1_7mbro")
 environment = SubResource("Environment_74lek")
 
 [node name="entities" type="Node3D" parent="."]
+
+[node name="rusty_key" parent="entities" instance=ExtResource("28_1dqgb")]
+transform = Transform3D(0.767434, 0, -0.641128, 0, 1, 0, 0.641128, 0, 0.767434, -23.5853, -0.692061, 9.04655)
+script = ExtResource("29_y81of")
+codename = "Rusty Key"
+
+[node name="Area3D" type="Area3D" parent="entities/rusty_key" groups=["collectable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="entities/rusty_key/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00529671, 0.00593263, 0.0153313)
+shape = SubResource("BoxShape3D_5civd")
+
+[node name="oil_lamp" parent="entities" instance=ExtResource("4_4k8fq")]
+transform = Transform3D(0.761527, 0, 0.648133, 0, 1, 0, -0.648133, 0, 0.761527, -47.1453, -0.232183, 45.391)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="entities/oil_lamp"]
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+
+[node name="cardboard_high_closed" parent="entities" instance=ExtResource("5_75pfo")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, -46.9794, -0.49863, 45.5305)
+
+[node name="rusty_key2" parent="entities" instance=ExtResource("6_gv2t6")]
+transform = Transform3D(0.528246, 0, 0.849092, 0, 1, 0, -0.849092, 0, 0.528246, -46.8778, -0.221707, 45.6566)
+script = ExtResource("29_y81of")
+codename = "Maintenance Key"
+
+[node name="Area3D" type="Area3D" parent="entities/rusty_key2" groups=["collectable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="entities/rusty_key2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00866318, 0.0168457, 0.00988197)
+shape = SubResource("BoxShape3D_1xwo4")
 
 [node name="level" type="Node3D" parent="."]
 
@@ -180,6 +234,24 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.51
 [node name="brick_small_section_intersection_T" parent="level" instance=ExtResource("6_uacia")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.2605, 0, 7.74312)
 
+[node name="trashpile" parent="level" instance=ExtResource("10_n74k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.854038, -1.04885, 7.88633)
+
+[node name="trashbag_1" parent="level" instance=ExtResource("11_si7kk")]
+transform = Transform3D(-0.444745, 0, -0.895657, 0, 1, 0, 0.895657, 0, -0.444745, -0.660542, -1.46983, 6.46905)
+
+[node name="trashbag_2" parent="level" instance=ExtResource("12_pn65j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.20269, -1.46983, 6.94495)
+
+[node name="trashbag_3" parent="level" instance=ExtResource("11_si7kk")]
+transform = Transform3D(0.656757, 0, -0.754102, 0, 1, 0, 0.754102, 0, 0.656757, -0.745956, -1.46983, 6.95711)
+
+[node name="trashbag_4" parent="level" instance=ExtResource("12_pn65j")]
+transform = Transform3D(0.330446, 0.312531, 0.890578, -0.377225, 0.908675, -0.178914, -0.865163, -0.276827, 0.418163, -0.999062, -1.13228, 6.77088)
+
+[node name="straight_section" parent="level" instance=ExtResource("9_xrtyr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.1269, -0.000218801, -2.2122)
+
 [node name="brick_doorframe" parent="level" instance=ExtResource("4_lpvoh")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -36.7659, -0.0362188, 3.3408)
 
@@ -190,9 +262,6 @@ oneshot = true
 locked = true
 locked_required = "Maintenance Key"
 
-[node name="straight_section" parent="level/brick_doorframe" instance=ExtResource("9_xrtyr")]
-transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, 5.553, 0.036, 1.639)
-
 [node name="brick_small_section_bend_large" parent="level" instance=ExtResource("9_yk7ts")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -39.76, 0, 45.518)
 
@@ -201,9 +270,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00233406, 0, -41.565)
 
 [node name="brick_small_section9" parent="level" instance=ExtResource("1_iyx0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00424504, 0, -49.3275)
-
-[node name="brick_small_section13" parent="level" instance=ExtResource("1_iyx0m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00424504, 0, -56.0994)
 
 [node name="brick_small_section14" parent="level" instance=ExtResource("1_iyx0m")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.76683, 0, -41.5584)
@@ -352,9 +418,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -62.86
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -62.8734, 0, -70.6217)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="level"]
-transform = Transform3D(0.669818, 0, 0.742526, 0.336926, 0.891125, -0.303935, -0.661683, 0.453757, 0.596892, 1.24407, -0.600477, -40.1053)
+transform = Transform3D(-0.647498, -0.747208, -0.149755, -0.132236, -0.0833655, 0.987706, -0.750507, 0.659341, -0.0448285, 0.00664818, 8.00176, -56.1213)
 light_color = Color(0.585072, 0.383418, 0.0556186, 1)
-spot_range = 15.704
+spot_range = 12.3424
 spot_attenuation = 0.58
 spot_angle = 50.68
 spot_angle_attenuation = 0.189465
@@ -364,6 +430,9 @@ transform = Transform3D(-7.64949e-08, 0, 1.75, 0, 1.75, 0, -1.75, 0, -7.64949e-0
 
 [node name="StaticBody3D" parent="level/round_irongate_with_door/irongate_with_door" index="1"]
 useable = true
+oneshot = true
+locked = true
+locked_required = "Rusty Key"
 
 [node name="straight_section_dooropening" parent="level" instance=ExtResource("15_ff6ho")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.765, 0, 1.504)
@@ -374,8 +443,56 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.76
 [node name="straight_section_rise_dooropening" parent="level" instance=ExtResource("18_c6rvn")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -42.419, -0.598, -8.325)
 
+[node name="pallet" parent="level" instance=ExtResource("22_kay4s")]
+transform = Transform3D(0.732448, 0.680823, 0, -0.680823, 0.732448, 0, 0, 0, 1, -24.8436, -0.234254, 13.2938)
+
+[node name="tire" parent="level" instance=ExtResource("23_j7bvy")]
+transform = Transform3D(0.799988, 0.600015, 0, -0.600015, 0.799988, 0, 0, 0, 1, -24.2343, -0.464161, 12.9054)
+
+[node name="trashbag_5" parent="level" instance=ExtResource("12_pn65j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9152, -0.823672, 13.5778)
+
+[node name="trash_1" parent="level" instance=ExtResource("24_1dqgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.2054, -0.607747, 9.85053)
+
+[node name="trashpile2" parent="level" instance=ExtResource("10_n74k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8916, -1.04885, 7.99325)
+
+[node name="trashpile3" parent="level" instance=ExtResource("10_n74k2")]
+transform = Transform3D(0.631759, 0, -0.775165, 0, 1, 0, 0.775165, 0, 0.631759, -22.359, -1.04885, 8.72251)
+
+[node name="cardboard_high_open" parent="level" instance=ExtResource("25_y81of")]
+transform = Transform3D(0.715059, 0.166371, -0.678979, 7.45058e-09, 0.971267, 0.237991, 0.699065, -0.170178, 0.694513, -23.2139, -1.19856, 8.46533)
+
+[node name="ruble_pile_brick" parent="level" instance=ExtResource("26_gsk6d")]
+transform = Transform3D(0.870862, 0, -0.491527, 0, 1, 0, 0.491527, 0, 0.870862, -24.5749, -1.27933, 7.8181)
+
+[node name="straight_long" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.813, 0.370609, 9.63609)
+
+[node name="straight_long2" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -44.813, 0.370436, 7.595)
+
+[node name="straight_long3" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -44.813, 0.370436, 5.555)
+
+[node name="straight_long4" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.813, 0.370436, 3.513)
+
+[node name="straight_long5" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -44.8129, 0.835112, 10.6171)
+
+[node name="straight_long6" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.8131, 0.835009, 8.57602)
+
+[node name="straight_long7" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, -44.8131, 0.835009, 6.53602)
+
+[node name="straight_long8" parent="level" instance=ExtResource("27_j7bvy")]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -44.8131, 0.835009, 4.49402)
+
 [node name="player" parent="." instance=ExtResource("3_iyx0m")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 62.3354, -0.699835, -72.1599)
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 34.6442, -0.699837, -72.6905)
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.6441, 1.22566, 45.4191)
@@ -395,11 +512,20 @@ material = SubResource("FogMaterial_kay4s")
 [node name="monster_sound_trigger" parent="." instance=ExtResource("12_ghpyy")]
 transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, 62.8123, 0.426452, -60.105)
 
+[node name="monster_sound_trigger2" parent="." instance=ExtResource("12_ghpyy")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -54.1677, 0.42646, -41.6693)
+
+[node name="monster_sound_trigger3" parent="." instance=ExtResource("12_ghpyy")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -13.7153, 0.426462, 7.81036)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_44saj")
 volume_db = -5.148
 pitch_scale = 0.83
 autoplay = true
 parameters/looping = true
+
+[node name="brick_small_section_w_manhole" parent="." instance=ExtResource("33_75pfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003, 0, -56.096)
 
 [editable path="level/round_irongate_with_door"]

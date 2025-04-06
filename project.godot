@@ -12,7 +12,7 @@ config_version=5
 
 config/name="The Chase Beneath"
 config/description="My entry for LudumDare 57, a horror FPS with the theme \"Depths\""
-run/main_scene="uid://btquyh8tf1oh6"
+run/main_scene="uid://b8luqhrg0b4bc"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -24,6 +24,7 @@ file_logging/enable_file_logging=true
 
 interactable=""
 player=""
+collectable=""
 
 [input]
 
