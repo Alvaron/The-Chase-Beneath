@@ -6,10 +6,14 @@ extends Node3D
 func _ready() -> void:
 	menu_display.visible = true
 	credits_display.visible = false
+	OverheadScript.set_main_node(get_parent())
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/test.tscn")
-
+	OverheadScript.main_node.get_child(0).queue_free()
+	var screen_between = OverheadScript.loading_screen.instantiate()
+	OverheadScript.main_node.add_child(screen_between)
+	screen_between.load_to_level("res://Scenes/test.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/test.tscn")
 
 func _on_credits_pressed() -> void:
 	menu_display.visible = false

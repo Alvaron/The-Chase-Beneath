@@ -12,9 +12,13 @@ config_version=5
 
 config/name="The Chase Beneath"
 config/description="My entry for LudumDare 57, a horror FPS with the theme \"Depths\""
-run/main_scene="uid://b8luqhrg0b4bc"
+run/main_scene="uid://b0u04k4eiuei8"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+OverheadScript="*res://Scenes/overhead_script.gd"
 
 [debug]
 

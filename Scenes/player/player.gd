@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var speed:float = 5
+var speed:float = 3.2
 var jump_speed:float = 4.5
 var can_jump:bool = true
 var gravity:float = 0.0
