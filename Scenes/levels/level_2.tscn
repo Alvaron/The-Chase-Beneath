@@ -1,0 +1,335 @@
+[gd_scene load_steps=30 format=3 uid="uid://bgx5052apfn1j"]
+
+[ext_resource type="PackedScene" uid="uid://c3ownf3ph4q5b" path="res://Scenes/sewers/brick/brick_small_section_long.tscn" id="1_8j7el"]
+[ext_resource type="PackedScene" uid="uid://dq04vl1aelsiq" path="res://Scenes/sewers/brick/brick_small_section_side_door.tscn" id="2_dspjw"]
+[ext_resource type="PackedScene" uid="uid://cqvuq7dcdndfn" path="res://Scenes/sewers/brick/brick_small_section_endcap.tscn" id="3_fh68y"]
+[ext_resource type="PackedScene" uid="uid://dr1pf5krx8avu" path="res://Scenes/sewers/brick/brick_doorframe.tscn" id="4_ym5bi"]
+[ext_resource type="PackedScene" uid="uid://cdodfejabfhsg" path="res://Scenes/sewers/door_metal_greenish.tscn" id="5_yuh2w"]
+[ext_resource type="PackedScene" uid="uid://bqh80regujx4m" path="res://Scenes/sewers/brick/brick_small_section_intersection_t.tscn" id="6_fkc1a"]
+[ext_resource type="PackedScene" uid="uid://da1n43ql85c1w" path="res://Scenes/sewers/brick/brick_small_bend_small.tscn" id="7_lnq35"]
+[ext_resource type="PackedScene" uid="uid://v32u8wvq1qjk" path="res://Scenes/sewers/round_irongate_with_door.tscn" id="7_ym5bi"]
+[ext_resource type="PackedScene" uid="uid://0lp276k87os2" path="res://Scenes/sewers/brick/brick_small_section.tscn" id="9_fkc1a"]
+[ext_resource type="PackedScene" uid="uid://c4of0hl13t4ho" path="res://Scenes/items/rusty_key.tscn" id="9_yuh2w"]
+[ext_resource type="Script" uid="uid://cmkxo212d8h43" path="res://Scenes/scripts/task_item.gd" id="10_fkc1a"]
+[ext_resource type="PackedScene" uid="uid://cxlmwcyqd38xu" path="res://Scenes/player/player.tscn" id="11_yuh2w"]
+[ext_resource type="PackedScene" uid="uid://cmols21psu2mu" path="res://Scenes/sewers/brick/brick_small_section_w_ladder.tscn" id="12_lnq35"]
+[ext_resource type="PackedScene" uid="uid://dnbysvlties56" path="res://Scenes/pipes/90_degree_bend.tscn" id="13_8mvnu"]
+[ext_resource type="PackedScene" uid="uid://l6wcspiyotr0" path="res://Scenes/pipes/straight_long.tscn" id="14_co332"]
+[ext_resource type="PackedScene" uid="uid://bblxwcepvxhe5" path="res://Scenes/sewers/brick/brick_small_section_rising.tscn" id="15_kb2w7"]
+[ext_resource type="PackedScene" uid="uid://coo8oe2m5tcep" path="res://Scenes/sewers/door_metal_white.tscn" id="16_g6qx2"]
+[ext_resource type="PackedScene" uid="uid://ccg5wfuugswxv" path="res://Scenes/sewers/maintenance/straight_section_dooropening.tscn" id="17_3m7r5"]
+[ext_resource type="PackedScene" uid="uid://dou6wg11bbbdk" path="res://Scenes/sewers/maintenance/straight_section.tscn" id="18_8mr20"]
+[ext_resource type="PackedScene" uid="uid://dgqxascvw103u" path="res://Scenes/sewers/maintenance/straight_section_intersection_t.tscn" id="19_1ega6"]
+[ext_resource type="PackedScene" uid="uid://cl02oh8fje18n" path="res://Scenes/sewers/maintenance/straight_just_endcap.tscn" id="20_c46r4"]
+[ext_resource type="PackedScene" uid="uid://boml7la0rfm2s" path="res://Scenes/pipes/t_section_short.tscn" id="21_c46r4"]
+[ext_resource type="PackedScene" uid="uid://bw2p5i8arn6yq" path="res://Scenes/pipes/cap_with_valve.tscn" id="22_eugjt"]
+[ext_resource type="PackedScene" uid="uid://l4v60nkm56wn" path="res://Scenes/people/person_1.tscn" id="23_mjtoc"]
+[ext_resource type="PackedScene" uid="uid://3rcfx4qd0qag" path="res://Scenes/props/trashpile.tscn" id="24_0074i"]
+[ext_resource type="PackedScene" uid="uid://bwlpjwt64k5kv" path="res://Scenes/props/trash_1.tscn" id="25_8k7ur"]
+[ext_resource type="PackedScene" uid="uid://dqfotgg6pf2pg" path="res://Scenes/props/trashbag_1.tscn" id="26_6jro4"]
+[ext_resource type="PackedScene" uid="uid://d1c7gwx3d0fu7" path="res://Scenes/props/trashbag_2.tscn" id="27_j6408"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yuh2w"]
+size = Vector3(0.388184, 0.0668335, 0.2117)
+
+[node name="Level2" type="Node3D"]
+
+[node name="level_geometry" type="Node3D" parent="."]
+
+[node name="brick_small_section_long" parent="level_geometry" instance=ExtResource("1_8j7el")]
+
+[node name="brick_small_section_long2" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.77)
+
+[node name="brick_small_section_long6" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.288, 0, -64.503)
+
+[node name="brick_small_section_long3" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.54)
+
+[node name="brick_small_section_long5" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3526, 0, -66.9853)
+
+[node name="brick_small_section_long7" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.688, 0, -98.001)
+
+[node name="brick_small_section_long8" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.688, 0, -111.766)
+
+[node name="brick_small_section_long9" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.688, 0, -125.525)
+
+[node name="brick_small_section_long4" parent="level_geometry" instance=ExtResource("1_8j7el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.845, 0, -54.486)
+
+[node name="brick_small_section_side_door" parent="level_geometry" instance=ExtResource("2_dspjw")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 6.765)
+
+[node name="brick_small_section_endcap" parent="level_geometry" instance=ExtResource("3_fh68y")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 13.537)
+
+[node name="brick_doorframe" parent="level_geometry" instance=ExtResource("4_ym5bi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44336, 0, 6.76884)
+
+[node name="door_metal_greenish" parent="level_geometry/brick_doorframe" instance=ExtResource("5_yuh2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107743, 0, 0.4946)
+
+[node name="brick_small_section_intersection_T" parent="level_geometry" instance=ExtResource("6_fkc1a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -42.313)
+
+[node name="brick_small_section_intersection_T2" parent="level_geometry" instance=ExtResource("6_fkc1a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.845, 0, -69.258)
+
+[node name="round_irongate_with_door" parent="level_geometry" instance=ExtResource("7_ym5bi")]
+transform = Transform3D(2.29485e-07, 0, -1.75, 0, 1.75, 0, 1.75, 0, 2.29485e-07, 0, -0.23, -38.067)
+
+[node name="StaticBody3D" parent="level_geometry/round_irongate_with_door/irongate_with_door" index="1"]
+useable = true
+oneshot = true
+locked = true
+locked_required = "Rusty Key"
+
+[node name="round_irongate_with_door2" parent="level_geometry" instance=ExtResource("7_ym5bi")]
+transform = Transform3D(-1.75, 0, -1.5299e-07, 0, 1.75, 0, 1.5299e-07, 0, -1.75, 17.1832, -0.23, -69.2653)
+
+[node name="StaticBody3D" parent="level_geometry/round_irongate_with_door2/irongate_with_door" index="1"]
+useable = true
+oneshot = true
+locked = true
+locked_required = "Another Rusty Key"
+
+[node name="brick_small_section_intersection_T3" parent="level_geometry" instance=ExtResource("6_fkc1a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -26.356, 0, -59.23)
+
+[node name="brick_small_bend_small" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.767, 0, -42.31)
+
+[node name="brick_small_bend_small2" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -13.178, 0, -47.388)
+
+[node name="brick_small_bend_small3" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -13.18, 0, -54.156)
+
+[node name="brick_small_bend_small4" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.332, 0, -74.335)
+
+[node name="brick_small_bend_small8" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -0.332, 0, -81.0903)
+
+[node name="brick_small_bend_small9" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -24.689, 0, -91.247)
+
+[node name="brick_small_bend_small5" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 26.023, 0, -64.183)
+
+[node name="brick_small_bend_small6" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 26.028, 0, -57.413)
+
+[node name="brick_small_bend_small7" parent="level_geometry" instance=ExtResource("7_lnq35")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 38.204, 0, -52.33)
+
+[node name="brick_small_section" parent="level_geometry" instance=ExtResource("9_fkc1a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.511, 0, -86.168)
+
+[node name="props" type="Node3D" parent="."]
+
+[node name="rusty_key" parent="props" instance=ExtResource("9_yuh2w")]
+transform = Transform3D(0.507764, 0, -0.861496, 0, 1, 0, 0.861496, 0, 0.507764, 1.48738, -0.576634, -36.2303)
+script = ExtResource("10_fkc1a")
+codename = "Rusty Key"
+
+[node name="Area3D" type="Area3D" parent="props/rusty_key" groups=["collectable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="props/rusty_key/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175781, 0.0126038, 0.00471497)
+shape = SubResource("BoxShape3D_yuh2w")
+
+[node name="rusty_key2" parent="props" instance=ExtResource("9_yuh2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1323, -1.36704, -108.525)
+script = ExtResource("10_fkc1a")
+codename = "Another Rusty Key"
+
+[node name="Area3D" type="Area3D" parent="props/rusty_key2" groups=["collectable"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="props/rusty_key2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175781, 0.0126038, 0.00471497)
+shape = SubResource("BoxShape3D_yuh2w")
+
+[node name="brick_small_section_endcap" parent="." instance=ExtResource("3_fh68y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.356, 0, -80.757)
+
+[node name="brick_small_section_endcap6" parent="." instance=ExtResource("3_fh68y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.705, -3.998, -166.349)
+
+[node name="brick_small_section_endcap2" parent="." instance=ExtResource("3_fh68y")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -26.358, 0, -44.687)
+
+[node name="brick_small_section_endcap5" parent="." instance=ExtResource("3_fh68y")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 28.7692, 0, -79.2661)
+
+[node name="brick_small_section_endcap3" parent="." instance=ExtResource("3_fh68y")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -28.8504, 7.84099, -49.5304)
+
+[node name="brick_small_section_endcap4" parent="." instance=ExtResource("3_fh68y")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -28.8504, 7.84099, -56.2676)
+
+[node name="brick_small_section_w_ladder" parent="." instance=ExtResource("12_lnq35")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.355, 0, -51.458)
+
+[node name="brick_small_section_intersection_T" parent="." instance=ExtResource("6_fkc1a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 43.2897, 0, -79.2634)
+
+[node name="brick_small_section_side_door" parent="." instance=ExtResource("2_dspjw")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.5376, 0, -79.2638)
+
+[node name="brick_doorframe" parent="." instance=ExtResource("4_ym5bi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35.543, -0.024, -83.635)
+
+[node name="door_metal_greenish" parent="brick_doorframe" instance=ExtResource("5_yuh2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0986099, 0, 0.504227)
+useable = true
+
+[node name="brick_doorframe3" parent="." instance=ExtResource("4_ym5bi")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 29.3471, -0.0309041, -98.4597)
+
+[node name="door_metal_greenish" parent="brick_doorframe3" instance=ExtResource("5_yuh2w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0986099, 0, 0.504227)
+useable = true
+
+[node name="90degree_bend" parent="." instance=ExtResource("13_8mvnu")]
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, -21.9362, 0.431498, -106.403)
+
+[node name="straight_long" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -21.786, 0.434, -108.244)
+
+[node name="straight_long2" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, -21.786, 0.434, -110.283)
+
+[node name="90degree_bend2" parent="." instance=ExtResource("13_8mvnu")]
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, -1, 4.37114e-08, -8.74228e-08, -8.74228e-08, -8.74228e-08, 1, -21.9362, 0.434834, -115.204)
+
+[node name="straight_long3" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -21.786, 0.432332, -113.363)
+
+[node name="straight_long4" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(-0.707107, 0.707107, -6.18172e-08, 0.707107, 0.707107, -6.18172e-08, 0, -8.74228e-08, -1, -21.786, 0.432332, -111.324)
+
+[node name="90degree_bend3" parent="." instance=ExtResource("13_8mvnu")]
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, -21.9362, 0.853246, -106.403)
+
+[node name="straight_long5" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.786, 0.855748, -108.244)
+
+[node name="straight_long6" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.786, 0.855748, -110.283)
+
+[node name="90degree_bend4" parent="." instance=ExtResource("13_8mvnu")]
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, -1, 4.37114e-08, -8.74228e-08, -8.74228e-08, -8.74228e-08, 1, -21.9362, 0.856582, -115.204)
+
+[node name="straight_long7" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -21.786, 0.85408, -113.363)
+
+[node name="straight_long8" parent="." instance=ExtResource("14_co332")]
+transform = Transform3D(0.707107, 0.707107, -6.18172e-08, 0.707107, -0.707107, 6.18172e-08, 0, -8.74228e-08, -1, -21.786, 0.85408, -111.324)
+
+[node name="brick_small_section_rising" parent="." instance=ExtResource("15_kb2w7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.695, -1.002, -139.292)
+
+[node name="brick_small_section_rising2" parent="." instance=ExtResource("15_kb2w7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.695, -2.003, -146.06)
+
+[node name="brick_small_section_rising3" parent="." instance=ExtResource("15_kb2w7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.695, -3.00073, -152.826)
+
+[node name="brick_small_section_rising4" parent="." instance=ExtResource("15_kb2w7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.695, -4.00173, -159.595)
+
+[node name="brick_doorframe2" parent="." instance=ExtResource("4_ym5bi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.686, -4.023, -168.051)
+
+[node name="door_metal_white" parent="brick_doorframe2" instance=ExtResource("16_g6qx2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125961, 0, 0.508656)
+
+[node name="straight_section_dooropening" parent="." instance=ExtResource("17_3m7r5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.538, 0, -85.4979)
+
+[node name="straight_section_dooropening2" parent="." instance=ExtResource("17_3m7r5")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.3513, 0, -98.4654)
+
+[node name="straight_section_dooropening3" parent="." instance=ExtResource("17_3m7r5")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 27.5309, 0, -98.4654)
+
+[node name="straight_section" parent="." instance=ExtResource("18_8mr20")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 33.8967, 0, -90.567)
+
+[node name="straight_section2" parent="." instance=ExtResource("18_8mr20")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 33.8967, 0, -94.751)
+
+[node name="straight_section_intersection_T" parent="." instance=ExtResource("19_1ega6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35.4788, 0, -98.2855)
+
+[node name="straight_just_endcap" parent="." instance=ExtResource("20_c46r4")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.5322, 0, -100.452)
+
+[node name="straight_section3" parent="." instance=ExtResource("18_8mr20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4768, 0, -96.8262)
+
+[node name="straight_just_endcap2" parent="." instance=ExtResource("20_c46r4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0992, 0, -98.4681)
+
+[node name="T_section_short" parent="." instance=ExtResource("21_c46r4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, 22.0813, 0.629575, -99.5975)
+
+[node name="T_section_short2" parent="." instance=ExtResource("21_c46r4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.0364, 0.515, -99.4834)
+
+[node name="90degree_bend5" parent="." instance=ExtResource("13_8mvnu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 22.9191, 0.62957, -99.3363)
+
+[node name="cap_with_valve" parent="." instance=ExtResource("22_eugjt")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 22.0813, 0.632052, -99.1561)
+target = "level2_steamhazard"
+
+[node name="person_1" parent="." instance=ExtResource("23_mjtoc")]
+transform = Transform3D(0.295936, -0.532651, -0.792909, 0.934293, 0.334163, 0.124224, 0.198793, -0.777572, 0.596543, -24.5031, -1.4105, -109.046)
+
+[node name="trashpile" parent="." instance=ExtResource("24_0074i")]
+transform = Transform3D(0.999663, 0, 0.0259676, 0, 1, 0, -0.0259676, 0, 0.999663, -24.941, -1.04774, -109.35)
+
+[node name="trash_1" parent="." instance=ExtResource("25_8k7ur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6148, -1.37719, -109.231)
+
+[node name="trashbag_1" parent="." instance=ExtResource("26_6jro4")]
+transform = Transform3D(0.926119, 0.164767, 0.339345, -0.175161, 0.98454, 0, -0.334099, -0.0594399, 0.940662, -24.2676, -1.46872, -110.281)
+
+[node name="trashbag_2" parent="." instance=ExtResource("26_6jro4")]
+transform = Transform3D(0.533127, 0, 0.846035, 0, 1, 0, -0.846035, 0, 0.533127, -24.6818, -1.46872, -110.066)
+
+[node name="trashbag_3" parent="." instance=ExtResource("27_j6408")]
+transform = Transform3D(0.999696, 0, 0.0246765, 0, 1, 0, -0.0246765, 0, 0.999696, -25.0834, -1.46872, -109.904)
+
+[node name="trashbag_4" parent="." instance=ExtResource("26_6jro4")]
+transform = Transform3D(0.999898, 0, -0.0143112, 0, 1, 0, 0.0143112, 0, 0.999898, -25.4584, -1.46872, -109.824)
+
+[node name="trashbag_5" parent="." instance=ExtResource("27_j6408")]
+transform = Transform3D(0.940662, 0, 0.339345, 0, 1, 0, -0.339345, 0, 0.940662, -25.4291, -1.46872, -110.221)
+
+[node name="trashbag_6" parent="." instance=ExtResource("26_6jro4")]
+transform = Transform3D(-0.819272, 0, 0.573405, 0, 1, 0, -0.573405, 0, -0.819272, -24.9955, -1.46872, -110.315)
+
+[node name="trashbag_7" parent="." instance=ExtResource("27_j6408")]
+transform = Transform3D(0.940662, 0, 0.339345, 0, 1, 0, -0.339345, 0, 0.940662, -24.5328, -1.46872, -110.594)
+
+[node name="trashbag_8" parent="." instance=ExtResource("26_6jro4")]
+transform = Transform3D(0.940662, 0, 0.339345, 0, 1, 0, -0.339345, 0, 0.940662, -25.1144, -1.15722, -110.193)
+
+[node name="trashbag_9" parent="." instance=ExtResource("27_j6408")]
+transform = Transform3D(0.873671, -0.34863, 0.339345, 0.370622, 0.928784, 0, -0.315179, 0.125769, 0.940662, -24.5841, -1.13368, -110.401)
+
+[node name="player" parent="." instance=ExtResource("11_yuh2w")]
+
+[node name="trash_2" parent="." instance=ExtResource("25_8k7ur")]
+transform = Transform3D(0.861629, 0, -0.507538, 0, 1, 0, 0.507538, 0, 0.861629, 2.31904, -0.598192, -36.4806)
+
+[editable path="level_geometry/round_irongate_with_door"]
+[editable path="level_geometry/round_irongate_with_door2"]
