@@ -55,25 +55,23 @@ var speed:float = 30.0
 @onready var ray_cast_3d_48: RayCast3D = $RayCast3D48
 @onready var rays:Array = [ray_cast_3d, ray_cast_3d_2, ray_cast_3d_3, ray_cast_3d_4, 
 ray_cast_3d_5, ray_cast_3d_6, ray_cast_3d_7, ray_cast_3d_8, ray_cast_3d_9, 
-ray_cast_3d_10, ray_cast_3d_11, ray_cast_3d_12, ray_cast_3d_13, ray_cast_3d_14, ray_cast_3d_15, 
-ray_cast_3d_16, ray_cast_3d_17, ray_cast_3d_18, ray_cast_3d_19, ray_cast_3d_20, 
-ray_cast_3d_21, ray_cast_3d_22, ray_cast_3d_23, ray_cast_3d_24, ray_cast_3d_25, ray_cast_3d_26, 
-ray_cast_3d_27, ray_cast_3d_28, ray_cast_3d_29, ray_cast_3d_30, ray_cast_3d_31, 
-ray_cast_3d_32, ray_cast_3d_33, ray_cast_3d_34, ray_cast_3d_35, ray_cast_3d_36, 
-ray_cast_3d_37, ray_cast_3d_38, ray_cast_3d_39, ray_cast_3d_40, ray_cast_3d_41, ray_cast_3d_42, 
-ray_cast_3d_43, ray_cast_3d_44, ray_cast_3d_45, ray_cast_3d_46, ray_cast_3d_47, 
-ray_cast_3d_48]
+ray_cast_3d_10, ray_cast_3d_11, ray_cast_3d_12, ray_cast_3d_13, ray_cast_3d_14, 
+ray_cast_3d_15, ray_cast_3d_16, ray_cast_3d_17, ray_cast_3d_18, ray_cast_3d_19, 
+ray_cast_3d_20, ray_cast_3d_21, ray_cast_3d_22, ray_cast_3d_23, ray_cast_3d_24, 
+ray_cast_3d_25, ray_cast_3d_26, ray_cast_3d_27, ray_cast_3d_28, ray_cast_3d_29, 
+ray_cast_3d_30, ray_cast_3d_31, ray_cast_3d_32, ray_cast_3d_33, ray_cast_3d_34, 
+ray_cast_3d_35, ray_cast_3d_36, ray_cast_3d_37, ray_cast_3d_38, ray_cast_3d_39, 
+ray_cast_3d_40, ray_cast_3d_41, ray_cast_3d_42, ray_cast_3d_43, ray_cast_3d_44, 
+ray_cast_3d_45, ray_cast_3d_46, ray_cast_3d_47, ray_cast_3d_48]
 
 var scantime:float = 0.0
 var max_scantime:float = 0.5
 var looking:bool = true
+var target:Vector3 = Vector3.ZERO
 
-func _ready():
-	print(rays)
 
 func _process(delta: float) -> void:
 	if scantime < 0.0:
-		print("alive")
 		for scanning in rays:
 			if scanning.is_colliding():
 				if scanning.get_collider().is_in_group("player") and looking:
@@ -83,7 +81,9 @@ func _process(delta: float) -> void:
 						audio1.play()
 					else:
 						audio2.play()
-					var direction:Vector3 = (scanning.get_collider().global_position - global_position) * -1
+					target = scanning.get_collider().global_position
+					look_at(target)
+					var direction:Vector3 = (scanning.get_collider().global_position - global_position)
 					velocity = transform.basis * (direction.normalized() * speed)
 					looking = false
 		if global_position.x > 5000 or global_position.x < -5000:

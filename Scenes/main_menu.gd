@@ -4,6 +4,7 @@ extends Node3D
 @onready var credits_display: VBoxContainer = $MarginContainer/VBoxContainer2
 
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	menu_display.visible = true
 	credits_display.visible = false
 	OverheadScript.set_main_node(get_parent())

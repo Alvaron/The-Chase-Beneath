@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b8luqhrg0b4bc"]
+[gd_scene load_steps=25 format=3 uid="uid://b8luqhrg0b4bc"]
 
 [ext_resource type="Script" uid="uid://nyj0mgcfmnwe" path="res://Scenes/main_menu.gd" id="1_koqhg"]
 [ext_resource type="PackedScene" uid="uid://0lp276k87os2" path="res://Scenes/sewers/brick/brick_small_section.tscn" id="2_7467j"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://tab88887t1oi" path="res://Assets/sound/sound-ambience-sonido-ambiente-3-14040.mp3" id="14_iqn0u"]
 [ext_resource type="PackedScene" uid="uid://rqy8y0rec5rj" path="res://Scenes/props/ruble_pile_brick.tscn" id="14_m7n2d"]
 [ext_resource type="PackedScene" uid="uid://l6wcspiyotr0" path="res://Scenes/pipes/straight_long.tscn" id="15_2x1g0"]
+[ext_resource type="Texture2D" uid="uid://d1htvigrcqu71" path="res://Assets/images/TheChaseBeneath.png" id="16_riqfo"]
 
 [sub_resource type="Environment" id="Environment_74lek"]
 ambient_light_color = Color(0.805575, 0.645287, 0.414176, 1)
@@ -26,18 +27,9 @@ volumetric_fog_density = 0.0
 volumetric_fog_albedo = Color(0, 0.240552, 0.0827254, 1)
 volumetric_fog_emission_energy = 0.3
 
-[sub_resource type="Image" id="Image_2x1g0"]
-data = {
-"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
-"format": "RGBA8",
-"height": 4,
-"mipmaps": false,
-"width": 4
-}
-
 [sub_resource type="Image" id="Image_riqfo"]
 data = {
-"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
 "height": 4,
 "mipmaps": false,
@@ -46,7 +38,7 @@ data = {
 
 [sub_resource type="Image" id="Image_yxkem"]
 data = {
-"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
 "height": 4,
 "mipmaps": false,
@@ -54,6 +46,15 @@ data = {
 }
 
 [sub_resource type="Image" id="Image_7v4os"]
+data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_pjscj"]
 data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
@@ -63,7 +64,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture3D" id="ImageTexture3D_xrtyr"]
-_images = Array[Image]([SubResource("Image_2x1g0"), SubResource("Image_riqfo"), SubResource("Image_yxkem"), SubResource("Image_7v4os")])
+_images = Array[Image]([SubResource("Image_riqfo"), SubResource("Image_yxkem"), SubResource("Image_7v4os"), SubResource("Image_pjscj")])
 
 [sub_resource type="FogMaterial" id="FogMaterial_7mbro"]
 density = 0.3
@@ -159,6 +160,11 @@ grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 250
 theme_override_constants/margin_right = 200
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(578.5, 492.88)
+scale = Vector2(1.06169, 1.05074)
+texture = ExtResource("16_riqfo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 clip_contents = true

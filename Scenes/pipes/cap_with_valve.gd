@@ -7,13 +7,11 @@ var locked:bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func interact() -> void:
-	print(OverheadScript.tasks[target])
 	if open:
 		animation_player.play("turn_valve")
 		open = false
 		OverheadScript.tasks[target] = false
 		useable = false
-		print(OverheadScript.tasks[target])
 		get_node("Area3D").queue_free()
 
 func is_useable() -> bool:

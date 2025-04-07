@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://btquyh8tf1oh6"]
+[gd_scene load_steps=53 format=3 uid="uid://btquyh8tf1oh6"]
 
 [ext_resource type="Script" uid="uid://c2bkd2n0c1ixn" path="res://Scenes/test.gd" id="1_7mbro"]
 [ext_resource type="PackedScene" uid="uid://0lp276k87os2" path="res://Scenes/sewers/brick/brick_small_section.tscn" id="1_iyx0m"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dr1pf5krx8avu" path="res://Scenes/sewers/brick/brick_doorframe.tscn" id="4_lpvoh"]
 [ext_resource type="PackedScene" uid="uid://8rd786m0ypgo" path="res://Scenes/props/cardboard_high_closed.tscn" id="5_75pfo"]
 [ext_resource type="PackedScene" uid="uid://cdodfejabfhsg" path="res://Scenes/sewers/door_metal_greenish.tscn" id="5_at5dv"]
+[ext_resource type="PackedScene" uid="uid://dvtg3wkbxa0td" path="res://Scenes/monster/monster.tscn" id="5_j44qy"]
 [ext_resource type="PackedScene" uid="uid://cqvuq7dcdndfn" path="res://Scenes/sewers/brick/brick_small_section_endcap.tscn" id="5_jcd4p"]
 [ext_resource type="PackedScene" uid="uid://dnbgoiweap6op" path="res://Scenes/items/fine_key.tscn" id="6_gv2t6"]
 [ext_resource type="PackedScene" uid="uid://bqh80regujx4m" path="res://Scenes/sewers/brick/brick_small_section_intersection_t.tscn" id="6_uacia"]
@@ -50,18 +51,9 @@ size = Vector3(0.226709, 0.0382324, 0.110742)
 [sub_resource type="BoxShape3D" id="BoxShape3D_1xwo4"]
 size = Vector3(0.277981, 0.0629883, 0.155731)
 
-[sub_resource type="Image" id="Image_nlfrn"]
-data = {
-"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
-"format": "RGBA8",
-"height": 4,
-"mipmaps": false,
-"width": 4
-}
-
 [sub_resource type="Image" id="Image_j44qy"]
 data = {
-"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
 "height": 4,
 "mipmaps": false,
@@ -70,7 +62,7 @@ data = {
 
 [sub_resource type="Image" id="Image_ipur1"]
 data = {
-"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
 "height": 4,
 "mipmaps": false,
@@ -78,6 +70,15 @@ data = {
 }
 
 [sub_resource type="Image" id="Image_4fddv"]
+data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_wqbs1"]
 data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
@@ -87,7 +88,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture3D" id="ImageTexture3D_ghpyy"]
-_images = Array[Image]([SubResource("Image_nlfrn"), SubResource("Image_j44qy"), SubResource("Image_ipur1"), SubResource("Image_4fddv")])
+_images = Array[Image]([SubResource("Image_j44qy"), SubResource("Image_ipur1"), SubResource("Image_4fddv"), SubResource("Image_wqbs1")])
 
 [sub_resource type="FogMaterial" id="FogMaterial_yk7ts"]
 density = 0.15
@@ -96,18 +97,9 @@ emission = Color(0.0702456, 0.259546, 0.111142, 1)
 edge_fade = 0.303143
 density_texture = SubResource("ImageTexture3D_ghpyy")
 
-[sub_resource type="Image" id="Image_wqbs1"]
-data = {
-"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
-"format": "RGBA8",
-"height": 4,
-"mipmaps": false,
-"width": 4
-}
-
 [sub_resource type="Image" id="Image_051wo"]
 data = {
-"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
 "format": "RGBA8",
 "height": 4,
 "mipmaps": false,
@@ -116,7 +108,7 @@ data = {
 
 [sub_resource type="Image" id="Image_yn8tc"]
 data = {
-"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
 "height": 4,
 "mipmaps": false,
@@ -125,6 +117,15 @@ data = {
 
 [sub_resource type="Image" id="Image_66mtb"]
 data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_d83ya"]
+data = {
 "data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
 "format": "RGBA8",
 "height": 4,
@@ -132,14 +133,14 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture3D" id="ImageTexture3D_xrtyr"]
-_images = Array[Image]([SubResource("Image_wqbs1"), SubResource("Image_051wo"), SubResource("Image_yn8tc"), SubResource("Image_66mtb")])
+[sub_resource type="ImageTexture3D" id="ImageTexture3D_0ocgh"]
+_images = Array[Image]([SubResource("Image_051wo"), SubResource("Image_yn8tc"), SubResource("Image_66mtb"), SubResource("Image_d83ya")])
 
 [sub_resource type="FogMaterial" id="FogMaterial_7mbro"]
-density = 0.3
+density = 0.5
 emission = Color(0.223103, 0.223103, 0.223103, 1)
 edge_fade = 0.221914
-density_texture = SubResource("ImageTexture3D_xrtyr")
+density_texture = SubResource("ImageTexture3D_0ocgh")
 
 [sub_resource type="FogMaterial" id="FogMaterial_kay4s"]
 density = 1.1758
@@ -166,6 +167,9 @@ codename = "Rusty Key"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="entities/rusty_key/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00529671, 0.00593263, 0.0153313)
 shape = SubResource("BoxShape3D_5civd")
+
+[node name="monster" parent="entities" instance=ExtResource("5_j44qy")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, -30.7452, -1.31104, 28.5527)
 
 [node name="oil_lamp" parent="entities" instance=ExtResource("4_4k8fq")]
 transform = Transform3D(0.761527, 0, 0.648133, 0, 1, 0, -0.648133, 0, 0.761527, -47.1453, -0.232183, 45.391)
@@ -432,8 +436,9 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -62.86
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -62.8734, 0, -70.6217)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="level"]
-transform = Transform3D(-0.647498, -0.747208, -0.149755, -0.132236, -0.0833655, 0.987706, -0.750507, 0.659341, -0.0448285, 0.00664818, 8.00176, -56.1213)
+transform = Transform3D(-0.647498, -0.747208, -0.149755, -0.132236, -0.0833656, 0.987706, -0.750507, 0.659341, -0.0448288, 0.00664818, 9.87207, -56.1213)
 light_color = Color(0.585072, 0.383418, 0.0556186, 1)
+light_energy = 1.5
 spot_range = 12.3424
 spot_attenuation = 0.58
 spot_angle = 50.68
@@ -537,6 +542,9 @@ transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -54.1677, 0.42646
 [node name="monster_sound_trigger3" parent="." instance=ExtResource("12_ghpyy")]
 transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -13.7153, 0.426462, 7.81036)
 
+[node name="monster_sound_trigger4" parent="." instance=ExtResource("12_ghpyy")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, 0.0433916, 0.426462, -48.2392)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_44saj")
 volume_db = -5.148
@@ -555,6 +563,9 @@ to_level = "res://Scenes/levels/level_2.tscn"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.415466, -0.0782166)
 shape = SubResource("BoxShape3D_mftsw")
+
+[node name="monster" parent="." instance=ExtResource("5_j44qy")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.721074, 7.85106, -55.9226)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 

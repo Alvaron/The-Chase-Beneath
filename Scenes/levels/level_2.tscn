@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bgx5052apfn1j"]
+[gd_scene load_steps=59 format=3 uid="uid://bgx5052apfn1j"]
 
 [ext_resource type="PackedScene" uid="uid://c3ownf3ph4q5b" path="res://Scenes/sewers/brick/brick_small_section_long.tscn" id="1_8j7el"]
 [ext_resource type="PackedScene" uid="uid://dq04vl1aelsiq" path="res://Scenes/sewers/brick/brick_small_section_side_door.tscn" id="2_dspjw"]
@@ -28,16 +28,115 @@
 [ext_resource type="PackedScene" uid="uid://bwlpjwt64k5kv" path="res://Scenes/props/trash_1.tscn" id="25_8k7ur"]
 [ext_resource type="PackedScene" uid="uid://dqfotgg6pf2pg" path="res://Scenes/props/trashbag_1.tscn" id="26_6jro4"]
 [ext_resource type="PackedScene" uid="uid://d1c7gwx3d0fu7" path="res://Scenes/props/trashbag_2.tscn" id="27_j6408"]
+[ext_resource type="PackedScene" uid="uid://cle8c6rdqlcnb" path="res://Scenes/sewers/monster_sound_trigger.tscn" id="28_hl2sv"]
 [ext_resource type="PackedScene" uid="uid://rqy8y0rec5rj" path="res://Scenes/props/ruble_pile_brick.tscn" id="29_0074i"]
 [ext_resource type="PackedScene" uid="uid://cstcw55ntqi0f" path="res://Scenes/props/ruble_pile_concrete.tscn" id="30_8k7ur"]
+[ext_resource type="Texture2D" uid="uid://c0xttfrwldi4c" path="res://Assets/particles/steam.png" id="30_nyvxu"]
+[ext_resource type="Script" uid="uid://1n3chgvpiqk7" path="res://Scenes/levels/gpu_particles_3d.gd" id="31_6mq8g"]
 [ext_resource type="PackedScene" uid="uid://dxt3ioqkhuo8k" path="res://Scenes/props/broken_ceiling.tscn" id="31_dvoc4"]
+[ext_resource type="AudioStream" uid="uid://olpxqb5ryxfj" path="res://Assets/sound/steam-2-36231.mp3" id="31_wod1t"]
 [ext_resource type="PackedScene" uid="uid://bbtve6xthijrw" path="res://Scenes/props/ruble_brick.tscn" id="32_hl2sv"]
 [ext_resource type="PackedScene" uid="uid://chet1ydnc5f4x" path="res://Scenes/props/tire.tscn" id="33_i6nr4"]
 [ext_resource type="PackedScene" uid="uid://d0som4xiecwhb" path="res://Scenes/props/cardboard_low_open.tscn" id="34_tg54v"]
 [ext_resource type="PackedScene" uid="uid://dvtg3wkbxa0td" path="res://Scenes/monster/monster.tscn" id="35_lddb5"]
+[ext_resource type="PackedScene" uid="uid://dtc3vhwfivppe" path="res://Scenes/items/oil_lamp.tscn" id="37_tg54v"]
+[ext_resource type="AudioStream" uid="uid://tab88887t1oi" path="res://Assets/sound/sound-ambience-sonido-ambiente-3-14040.mp3" id="38_lddb5"]
+[ext_resource type="Script" uid="uid://cur1rtjhbllc8" path="res://Scenes/transit.gd" id="39_lddb5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yuh2w"]
 size = Vector3(0.388184, 0.0668335, 0.2117)
+
+[sub_resource type="FogMaterial" id="FogMaterial_nyvxu"]
+density = 1.1758
+albedo = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[sub_resource type="Image" id="Image_6mq8g"]
+data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_vo635"]
+data = {
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_ibvsg"]
+data = {
+"data": PackedByteArray(255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="Image" id="Image_ilnun"]
+data = {
+"data": PackedByteArray(0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 255, 0, 255, 255, 0, 0, 0, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture3D" id="ImageTexture3D_xrtyr"]
+_images = Array[Image]([SubResource("Image_6mq8g"), SubResource("Image_vo635"), SubResource("Image_ibvsg"), SubResource("Image_ilnun")])
+
+[sub_resource type="FogMaterial" id="FogMaterial_lddb5"]
+density = 0.5
+emission = Color(0.223103, 0.223103, 0.223103, 1)
+edge_fade = 0.221914
+density_texture = SubResource("ImageTexture3D_xrtyr")
+
+[sub_resource type="Environment" id="Environment_nyvxu"]
+ambient_light_color = Color(0.805575, 0.645287, 0.414176, 1)
+ambient_light_energy = 0.65
+tonemap_mode = 2
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_albedo = Color(0, 0.240552, 0.0827254, 1)
+volumetric_fog_emission_energy = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ibvsg"]
+size = Vector3(1, 1.83093, 2.26251)
+
+[sub_resource type="Curve" id="Curve_wod1t"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.427536, -190.112), 0.0, 0.0, 0, 0, Vector2(0.797101, -52.5842), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_6mq8g"]
+curve = SubResource("Curve_wod1t")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vo635"]
+lifetime_randomness = 0.19
+emission_shape = 1
+emission_sphere_radius = 0.75
+angle_min = -204.5
+angle_max = 196.4
+angle_curve = SubResource("CurveTexture_6mq8g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibvsg"]
+transparency = 1
+no_depth_test = true
+albedo_texture = ExtResource("30_nyvxu")
+proximity_fade_enabled = true
+proximity_fade_distance = 0.01
+distance_fade_mode = 3
+
+[sub_resource type="QuadMesh" id="QuadMesh_ilnun"]
+material = SubResource("StandardMaterial3D_ibvsg")
+size = Vector2(1.2, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6mq8g"]
+size = Vector3(6.14044, 10.6539, 2.48889)
 
 [node name="Level2" type="Node3D"]
 
@@ -268,6 +367,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.68
 
 [node name="door_metal_white" parent="brick_doorframe2" instance=ExtResource("16_g6qx2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125961, 0, 0.508656)
+useable = true
 
 [node name="straight_section_dooropening" parent="." instance=ExtResource("17_3m7r5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.538, 0, -85.4979)
@@ -345,8 +445,11 @@ transform = Transform3D(0.940662, 0, 0.339345, 0, 1, 0, -0.339345, 0, 0.940662, 
 [node name="trashbag_9" parent="." instance=ExtResource("27_j6408")]
 transform = Transform3D(0.873671, -0.34863, 0.339345, 0.370622, 0.928784, 0, -0.315179, 0.125769, 0.940662, -24.5841, -1.13368, -110.401)
 
+[node name="monster_sound_trigger" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(-2.31015e-07, 0, -5.285, 0, 5.285, 0, 5.285, 0, -2.31015e-07, -8.1236, 1.46024, -42.5949)
+
 [node name="player" parent="." instance=ExtResource("11_yuh2w")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48.1787, -0.69983, -79.0948)
+transform = Transform3D(0.988806, 0, 0.149207, 0, 1, 0, -0.149207, 0, 0.988806, 1.95, -0.69983, 8.64216)
 
 [node name="trash_2" parent="." instance=ExtResource("25_8k7ur")]
 transform = Transform3D(0.861629, 0, -0.507538, 0, 1, 0, 0.507538, 0, 0.861629, 2.31904, -0.598192, -36.4806)
@@ -431,6 +534,179 @@ transform = Transform3D(0.125472, 0, -0.992097, 0, 1, 0, 0.992097, 0, 0.125472, 
 
 [node name="monster" parent="." instance=ExtResource("35_lddb5")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 30.4897, -1.18892, -68.676)
+
+[node name="monster_sound_trigger2" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -0.173416, 0.426452, 13.9831)
+
+[node name="monster_sound_trigger7" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -22.5929, 0.426452, -58.7862)
+
+[node name="monster_sound_trigger8" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -26.6731, 0.426452, -78.3211)
+
+[node name="monster_sound_trigger10" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -4.50111, 0.426452, -85.3002)
+pitch = 1.6
+
+[node name="monster_sound_trigger9" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, 55.0516, 0.426452, -79.4268)
+
+[node name="monster_sound_trigger3" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -25.2576, 0.426453, -136.422)
+
+[node name="monster_sound_trigger4" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -25.5046, 0.426453, -147.632)
+pitch = 0.83
+
+[node name="monster_sound_trigger5" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -25.5046, -0.540166, -153.672)
+pitch = 0.73
+
+[node name="monster_sound_trigger6" parent="." instance=ExtResource("28_hl2sv")]
+transform = Transform3D(5.285, 0, 0, 0, 5.285, 0, 0, 0, 5.285, -25.5046, -1.77422, -161.27)
+pitch = 1.24
+
+[node name="FogVolume3" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6795, -1.17209, -150.662)
+size = Vector3(12.5117, 6.11295, 39.0525)
+material = SubResource("FogMaterial_nyvxu")
+
+[node name="FogVolume2" type="FogVolume" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.4069, 3.83614, -82.1976)
+size = Vector3(226.001, 29.6399, 210.815)
+material = SubResource("FogMaterial_lddb5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nyvxu")
+
+[node name="monster2" parent="." instance=ExtResource("35_lddb5")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.122278, -1.19003, -36.7316)
+
+[node name="oil_lamp" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(0.761527, 0, 0.648133, -0.0938978, 0.98945, 0.110326, -0.641295, -0.144874, 0.753493, -23.0007, -0.80662, -136.547)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp2" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(0.761527, 0, 0.648133, -0.0938978, 0.98945, 0.110326, -0.641295, -0.144874, 0.753493, -23.098, -1.49558, -141.252)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp2"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp3" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(0.761527, 0, 0.648133, -0.0938978, 0.98945, 0.110326, -0.641295, -0.144874, 0.753493, -23.0362, -2.2852, -146.645)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp3"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp4" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(0.761527, 0, 0.648133, -0.0938978, 0.98945, 0.110326, -0.641295, -0.144874, 0.753493, -22.7646, -2.91725, -150.962)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp4"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp5" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(0.761527, 0, 0.648133, -0.0938978, 0.98945, 0.110326, -0.641295, -0.144874, 0.753493, -22.8304, -3.88336, -157.56)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp5"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp6" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6935, -4.69491, -166.923)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp6"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp7" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2758, -4.69491, -165.564)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp7"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="oil_lamp8" parent="." instance=ExtResource("37_tg54v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1193, -4.69491, -165.564)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="oil_lamp8"]
+transform = Transform3D(1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, 1, 0, 0.286288, 0)
+light_color = Color(0.52588, 0.271583, 9.62615e-08, 1)
+light_energy = 0.6
+light_volumetric_fog_energy = 1.3
+light_size = 0.26
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("38_lddb5")
+volume_db = -5.148
+pitch_scale = 0.83
+autoplay = true
+parameters/looping = true
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.6026, -3.90503, -167.693)
+script = ExtResource("39_lddb5")
+to_level = "res://Scenes/MainMenu.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.415466, -0.0782166)
+shape = SubResource("BoxShape3D_ibvsg")
+
+[node name="monster3" parent="." instance=ExtResource("35_lddb5")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 62.4186, -1.18892, -79.2328)
+
+[node name="monster4" parent="." instance=ExtResource("35_lddb5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.0813, -1.24316, -70.8571)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-0.0129652, 0.996217, 0.0859225, -0.988806, -3.29613e-08, -0.149207, -0.148642, -0.0868948, 0.985066, -21.533, 0.629236, -111.272)
+amount = 256
+lifetime = 2.0
+local_coords = true
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_vo635")
+draw_pass_1 = SubResource("QuadMesh_ilnun")
+script = ExtResource("31_6mq8g")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GPUParticles3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GPUParticles3D/StaticBody3D"]
+transform = Transform3D(1, -3.07336e-08, 0, -3.81842e-08, 1.00001, 0, 5.06639e-07, -5.1409e-07, 1, -0.117954, -4.82692, 0.744431)
+shape = SubResource("BoxShape3D_6mq8g")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="GPUParticles3D/StaticBody3D"]
+transform = Transform3D(1, -1.27591e-07, -4.32134e-07, -9.31323e-10, 1, -3.72529e-07, 0, 0, 1, 0, 0, 0)
+stream = ExtResource("31_wod1t")
+volume_db = -4.706
+autoplay = true
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 
 [editable path="level_geometry/round_irongate_with_door"]
 [editable path="level_geometry/round_irongate_with_door2"]

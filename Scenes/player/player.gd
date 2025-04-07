@@ -52,7 +52,6 @@ func handle_controls(delta:float) -> void:
 			randomize()
 			audio_footsteps.pitch_scale = randf_range(0.95, 1.05)
 			audio_footsteps.play()
-			print(audio_footsteps.pitch_scale)
 	else:
 		audio_footsteps.stop()
 	
@@ -73,7 +72,6 @@ func handle_controls(delta:float) -> void:
 					if equiped.has(ray.get_collider().get_parent().locked_required):
 						ray.get_collider().get_parent().interact()
 			if ray.get_collider().is_in_group("collectable"):
-				print("boop the snoot")
 				ray.get_collider().get_parent().interact(self)
 		
 	
