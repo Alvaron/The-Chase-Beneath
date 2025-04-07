@@ -14,6 +14,7 @@ func interact() -> void:
 		OverheadScript.tasks[target] = false
 		useable = false
 		print(OverheadScript.tasks[target])
+		get_node("Area3D").queue_free()
 
 func is_useable() -> bool:
 	return useable

@@ -9,6 +9,3 @@ var tasks:Dictionary = {
 
 func set_main_node(my_node:Node3D) -> void:
 	main_node = my_node
-
-func change_level(target) -> void:
-	pass
